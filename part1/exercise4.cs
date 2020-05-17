@@ -21,7 +21,7 @@ namespace part1
             luckyNumbers.Add(3);
             luckyNumbers.Add(7);
 
-            int multiply = 10;
+            int multiply = 10;                  
             int i = 1;
             int index = 0;
             int amountAdded = 2;
@@ -53,18 +53,22 @@ namespace part1
                     //        lowNumbers.Remove(number); 
                     //    }  
                     // }
-                    amountAdded = amountAdded * 2;
+                    amountAdded = amountAdded * 2;                  
                     index = amountAdded - 2;
-                    multiply = multiply * 10;
+                    multiply = multiply * 10; 
                     i = 1;
 
-                    n++;
+                    n++;                   // I was adding 3 and 7 to the beginning of the numbers. First to the first to indeces (-> 33, 73, 37, 77)
+                                            // Then to indeces [2-5] -> 333, 373, 337, 377 / 733, 773, 737, 777 etc
+                                            // so doubling the indeces on each round and counting which index to start from. 
+                                            // Got quite complicated :D
 
                 }
 
             }
 
-            List<int> lowNumbers = new List<int>();  // was going to make a list to "a"
+            List<int> lowNumbers = new List<int>();  // My idea was to make a list from 1-b and another one for 1-a and then substract list.Count(b) - list.Count(a). 
+                                                    // Unfortunately I ran out of time and never managed to finish it.
 
 
             lowNumbers.Add(3);

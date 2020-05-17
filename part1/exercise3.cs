@@ -12,7 +12,7 @@ namespace part1
             int i = 0;
             int indecesInUse = t.Length - 2;
 
-            if (t.Length == 0)
+            if (t.Length == 0) // what was I thinking..?
             {
                 return t[0];
             }
