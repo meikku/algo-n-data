@@ -2,7 +2,7 @@ namespace part2
 {
     using System;
     using System.Text;
-    public class Whatthe
+    public class Efficiency
     {
         public int Time(string n)
         {
