@@ -17,10 +17,7 @@ namespace part2
                         t[i] = t[1] + 2;
                     }
                     else t[i]++;
-                    if (t[i] > 10)
-                    {
-                        t[i] = t[i] - 10;
-                    } 
+                    
                     changes++;
                 }
             }
