@@ -8,7 +8,7 @@ namespace part2
         {
             int count = 0;
             int sum = 0;
-            for (int i = 0; i < t.Length; i++)
+            for (int i = 0; i < t.Length; i++) // foreach (int i in t)
             {
                 sum = sum + t[i];
             }
@@ -17,12 +17,12 @@ namespace part2
             {
                 return 0;
             }
-            int newSum = sum;
+            int newSum = sum; // newSum could be called "int right"
             int half = sum / 2;
            
             for (int i = 0; i < t.Length - 1; i++)
             {
-                newSum = newSum - t[i];
+                newSum = newSum - t[i]; // or: right += t[i];
 
                 if (newSum == half)
                 {

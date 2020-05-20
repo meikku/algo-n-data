@@ -16,7 +16,12 @@ namespace part2
                 {
                     longestRep++;
                     j++;
-                }
+                } 
+                // else
+                // {
+                // longestRep = 1;
+                // }
+                
                 if (longestRep > comparedRep)
                 {
                     comparedRep = longestRep;
