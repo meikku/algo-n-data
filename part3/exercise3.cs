@@ -83,13 +83,23 @@ namespace part3
             {
                 return;
             }
-            int pivot = t[0];
+            int k = 0;
+            int pivot = t[k];
             {
                 for (int i = 1; i < t.Length; i++)
                 {
-                    if (t[i] > t[0])
+                    if (t[i] < t[k])
                     {
-                        
+                        k++;
+                        int swap = t[i];
+                        t[i] = t[k];
+                        t[k] = swap;
+                    }
+                    if (t[i] > t[k])
+                    {
+                        int swap = t[i];
+                        t[i] = t[k];
+                        t[k] = swap;
                     }
 
                 }
