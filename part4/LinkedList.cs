@@ -16,17 +16,16 @@ namespace part4
 
         public void AddFirst(int n)
         {
+            Node first = new Node(n, null, null);
             if (this.head == null)
             {
-                Node first = new Node(n, null, null);
                 this.head = first;
                 this.tail = this.head;
-               
+
                 Console.WriteLine("this.head is now " + this.head.value);
             }
             else
             {
-                Node first = new Node(n, null, null);
                 Node next = new Node(0, null, null);
                 next = this.head;
                 this.head = first;
@@ -39,9 +38,9 @@ namespace part4
         }
         public void AddLast(int n)
         {
+            Node last = new Node(n, null, null);
             if (this.tail == null)
             {
-                Node last = new Node(n, null, null);
                 this.tail = last;
                 this.head = this.tail;
                 Console.WriteLine("this.tail is now " + this.tail.value);
@@ -49,7 +48,6 @@ namespace part4
 
             else
             {
-                Node last = new Node(n, null, null);
                 Node next = new Node(n, null, null);
                 next = this.tail;
                 this.tail = last;
@@ -73,7 +71,7 @@ namespace part4
         {
             Node n = this.head;
             int i = 0;
-            
+
             while (n != null)
             {
                 if (i == x)
