@@ -20,8 +20,8 @@ namespace part4
             {
                 Node first = new Node(n, null, null);
                 this.head = first;
-                first.next = this.tail;
-                this.tail.previous = first;
+                this.tail = this.head;
+               
                 Console.WriteLine("this.head is now " + this.head.value);
             }
             else
@@ -43,6 +43,7 @@ namespace part4
             {
                 Node last = new Node(n, null, null);
                 this.tail = last;
+                this.head = this.tail;
                 Console.WriteLine("this.tail is now " + this.tail.value);
             }
 
