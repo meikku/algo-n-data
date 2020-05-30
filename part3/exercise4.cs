@@ -6,6 +6,7 @@ namespace part3
 
         public bool Find(int[] t, int x)
         {
+            Array.Sort(t); // this was missing
             if (t.Length == 1)
             {
                 if (t[0] == x)

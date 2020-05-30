@@ -31,20 +31,9 @@ namespace part3
             {
                 help2[l] = t[k + l];
             }
-            Console.WriteLine("printing help: ");
-            foreach (int number in help)
-            {
-                Console.WriteLine(number);
-            }
-            Console.WriteLine("printing help2");
-            foreach (int number in help2)
-            {
-                Console.WriteLine(number);
-            }
-            Console.WriteLine("MergeSort(help)");
-            MergeSort(help);
-            Console.WriteLine("MergeSort(help2)");
-            MergeSort(help2);
+            
+            MergeSort(help); // should be help = MergeSort(help);  -> this should be in Merge?!
+            MergeSort(help2); // help2 = MergeSort(help2);
 
             Merge(help, help2);
 
@@ -52,7 +41,7 @@ namespace part3
 
         static int[] Merge(int[] n, int[] m)
         {
-            Console.WriteLine("Entering merge");
+           
             int[] merge = new int[n.Length + m.Length];
 
             int j = 0;
@@ -70,14 +59,11 @@ namespace part3
                     k++;
                 }
             }
-            Console.WriteLine("------*****-------");
-            foreach (int number in merge)
-            {
-                Console.WriteLine(number);
-            }
+           
+            
             return merge;
         }
-        public void QuickSort(int[] t)
+        public void QuickSort(int[] t) 
         {
             if (t.Length <= 1)
             {
