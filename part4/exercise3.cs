@@ -5,7 +5,7 @@ namespace part4
 
     public class SmallestDistance
     {
-        List<int> values = new List<int>();
+        List<int> values = new List<int>(); // private...
         public int difference;
 
         public void Add(int x)

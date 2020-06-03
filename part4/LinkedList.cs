@@ -4,7 +4,7 @@ namespace part4
     using System.Collections.Generic;
     public class LinkedList
     {
-        private Node head;
+        public Node head;
         private Node tail;
 
         public LinkedList()
@@ -22,18 +22,18 @@ namespace part4
                 this.head = first;
                 this.tail = this.head;
 
-                Console.WriteLine("this.head is now " + this.head.value);
             }
             else
             {
+                // this.head.previous = first;
+                // first.next = this.head;
+                // this.head = first
                 Node next = new Node(0, null, null);
                 next = this.head;
                 this.head = first;
                 this.head.next = next;
                 next.previous = this.head;
 
-
-                Console.WriteLine("this.head is now " + this.head.value);
             }
         }
         public void AddLast(int n)
@@ -43,17 +43,20 @@ namespace part4
             {
                 this.tail = last;
                 this.head = this.tail;
-                Console.WriteLine("this.tail is now " + this.tail.value);
+               
             }
 
             else
             {
+                // this.tail.next = last;
+                // last.previous = this.tail;
+                // this.tail = last;
                 Node next = new Node(n, null, null);
                 next = this.tail;
                 this.tail = last;
                 this.tail.previous = next;
                 next.next = this.tail;
-                Console.WriteLine("this.tail is now " + this.tail.value);
+             
             }
 
         }
