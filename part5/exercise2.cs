@@ -19,7 +19,7 @@ namespace part5
         }
         public void AddConnection(int a, int b)
         {
-            graph[a].Add(b);
+            graph[a].Add(b); // this.graph
             graph[b].Add(a);
         }
         public int Calculate(int x)
@@ -47,3 +47,6 @@ namespace part5
         }
     }
 }
+// or add: 
+// private int VisitNodes(int x)
+// so you always have the "visited" empty when you call Calculate()
