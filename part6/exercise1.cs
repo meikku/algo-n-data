@@ -52,7 +52,7 @@ namespace part6
                     }
 
 
-
+                    // should be after foreach
                     if (change == false)
                     {
                         break;

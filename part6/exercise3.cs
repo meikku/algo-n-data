@@ -13,6 +13,10 @@ namespace part6
         {
             this.graph = new int[n + 1, n + 1];
             this.n = n;
+            // for (int i = 1; i <=n; i++)
+            //      for (int j = 1; j <= this.n; i++)
+            //
+            //         { this.distance[i, j ] = inf;}
         }
 
         public void AddRoad(int a, int b, int d)
@@ -42,13 +46,14 @@ namespace part6
                     // Console.WriteLine("distance [i, j] is " + distance[i, j]);
                 }
             }
-            for (int k = 1; k < n + 1; k++)
+            for (int k = 1; k < n + 1; k++) // k <= n
             {
                 for (int i = 1; i < n + 1; i++)
                 {
                     for (int j = 1; j < n + 1; j++)
                     {
                        //  Console.WriteLine("i, k: " + distance[i, k] + ", k, j: " + distance[k, j]);
+                       
                         int newDistance = distance[i, k] + distance[k, j];
                         if (distance[i, j] > newDistance)
                         {
